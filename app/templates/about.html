@@ -1,0 +1,47 @@
+{% extends "index.html" %}
+
+{% block title %} About | Minh Keto {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/about.css') }}">
+{% endblock %}
+
+{% block main %}
+<section class="about-section">
+
+    <div class="about-header">
+        <h1>Our Story</h1>
+        <p class="tagline">A keto twist on the flavors of home 🇻🇳</p>
+    </div>
+
+    <div class="about-content">
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=800&q=80" alt="Chef at work">
+        </div>
+
+        <div class="about-text">
+            <h2>Why Minh Keto Was Born</h2>
+            <p>
+                When I heard rates of <strong>diabetes among the Vietnamese-American community were skyrocketing</strong>, 
+                I knew it was due to the high-carb diet many of us participate in.
+            </p>
+            <p>
+                So I set out to make a difference: low carb, keto friendly cuisine and desserts that we all love to eat.
+            </p>
+            <p>
+                At <em>Minh Keto</em>, we bring authentic flavors to your plate,
+                <strong>without the sugar spikes or guilt</strong>. 
+                We believe healthy food shouldn’t mean losing the tastes that make us who we are.
+            </p>
+
+            <h3>Our Mission</h3>
+            <p>
+                We’re on a mission to help families rediscover their favorite dishes in a healthier way. 
+                Whether you’re managing your health, supporting a loved one, or just living a lower-carb lifestyle, 
+                we’re here to make it delicious and easy.
+            </p>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

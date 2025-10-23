@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        Vietnamese Keto
+        {% endblock %}
+    </title>
+    <style>
+        :root {
+            --bg-hero-img: url( {{ url_for('static', path='images/hero.jpg')}} )
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+
+    {% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', path='css/landing.css') }}">
+    {% endblock %}
+
+    <link rel="icon" type="image/png" href="/app/static/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/app/static/favicon.svg" />
+<link rel="shortcut icon" href="/app/static/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/app/static/apple-touch-icon.png" />
+<link rel="manifest" href="/app/static/site.webmanifest" />
+</head>
+<body>
+    <!-- Wrapper for full height -->
+    <div class="page-wrapper">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="/">
+                    <img src="{{ url_for('static', path='images/logo.png') }}" alt="Vietnamese Keto Logo" class="logo">
+                </a>
+
+            </div>
+            
+            <div class="nav-center">
+                <a href="/">Home</a>
+                <a href="/#menu">Menu</a>
+                <div class="dropdown">
+                    <span class="menu-label">More ▾</span>
+                    <div class="dropdown-content">
+                        <a href="/about">About Us</a>
+                        <a href="/">Locations</a>
+                        <a href="/">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="tel:+15551234567" class="cta-button">Call Now: (555) 123-4567</a>
+            </div>
+        </nav>
+
+        {% block main %}
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="{{ url_for('static', path='images/logo.png')}}" alt="Hero Logo">
+                    <h1>Vietnamese Keto</h1>
+                </div>
+                <div class="hero-info">
+                    <p>Fresh, healthy, low-carb Vietnamese cuisine — made with love and flavor.</p>
+                    <p style="margin-top: 4rem;"><a href="tel:+15551234567" class="cta-button">(555) 123-4567</a></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Section below hero -->
+    <section class="below-hero">
+        <div class="card-grid">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ url_for("static", path='/images/banh.jpg')}}" alt="Banh Fish">
+            </div>
+            <div class="card-content">
+                <h3 class="card-label">Label 1</h3>
+                <p class="card-text">This is some descriptive text about the first card item.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ url_for('static', path='/images/banh_mi.jpg') }}" alt="A Banh Mi Sandwich">
+            </div>
+            <div class="card-content">
+                <h3 class="card-label">Label 2</h3>
+                <p class="card-text">This is some descriptive text about the second card item that might be longer.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="{{ url_for('static', path='/images/che.webp') }}" alt="Description 3">
+            </div>
+            <div class="card-content">
+                <h3 class="card-label">Label 3</h3>
+                <p class="card-text">Short text.</p>
+            </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+    </div>
+    </section>
+
+    {% endblock %}
+
+</body>
+</html>

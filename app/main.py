@@ -8,7 +8,7 @@ from .routes import router
 app = FastAPI()
 
 # Add middleware
-app.add_middleware(ProxiedHeadersMiddleware, trusted_hosts="*")
+app.add_middleware(ProxiedHeadersMiddleware)
 
 # Register static files directories
 app.mount(

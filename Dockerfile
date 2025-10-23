@@ -19,4 +19,4 @@ COPY . .
 EXPOSE 8080
 
 # Run with uvicorn (production-ready, single worker by default)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080", "--reload", "--forwarded-allow-ips=*"]

@@ -1,10 +1,14 @@
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
+from fastapi_proxiedheadersmiddleware import ProxiedHeadersMiddleware
 
 
 from .routes import router
 
 app = FastAPI()
+
+# Add middleware
+app.add_middleware(ProxiedHeadersMiddleware, trusted_hosts="*")
 
 # Register static files directories
 app.mount(
